@@ -9,7 +9,7 @@ def prep_rna(root_xmlnode, # must be XML node with name SequenceEditor
               ):
     for xml_seq in root_xmlnode.getElementsByTagName('sequences').item(0).childNodes : # List of child nodes from the first (item(0)) and only 'sequences' node in the document
         
-        # TODO: change to etree, this if is needed because DOM reads \n and whitespaces as Text nodes
+        # TODO: change to xml.ElementTree, this if is needed because DOM reads \n and whitespaces as Text nodes
         if xml_seq.nodeType == 3 : # type 3 is Text
             
             print("Ignoring Text node")
@@ -26,6 +26,18 @@ def prep_rna(root_xmlnode, # must be XML node with name SequenceEditor
             # Add it to the scene :
             toScene.sequence_editor.sequences.new_movie(seq_name, seq_filepath, seq_channel, seq_start_frame)
             del seq_name, seq_filepath, seq_channel, seq_start_frame # Clean up
+            # Remove read-only attributes
+            xml_seq.removeAttribute('frame_duration')
+            xml_seq.removeAttribute('frame_offset_end')
+            xml_seq.removeAttribute('frame_offset_start')
+            xml_seq.removeAttribute('frame_still_end')
+            xml_seq.removeAttribute('frame_still_start')
+            #~ xml_seq.removeAttribute('modifiers')
+            xml_seq.removeAttribute('type')
+            xml_seq.removeAttribute('crop')
+            xml_seq.removeAttribute('transform')
+            xml_seq.removeAttribute('proxy')
+            #~ xml_seq.removeAttribute('')
             
         if xml_seq.nodeName == 'SoundSequence' :
             
@@ -37,4 +49,14 @@ def prep_rna(root_xmlnode, # must be XML node with name SequenceEditor
             seq_start_frame = int(xml_seq.getAttribute('frame_start'))
             # Add it to the scene :
             toScene.sequence_editor.sequences.new_sound(seq_name, seq_filepath, seq_channel, seq_start_frame)
-            del seq_name, seq_filepath, seq_channel, seq_start_frame # Clean up       
+            del seq_name, seq_filepath, seq_channel, seq_start_frame # Clean up
+            xml_seq.removeAttribute('frame_duration')   
+            xml_seq.removeAttribute('frame_offset_end')   
+            xml_seq.removeAttribute('frame_offset_start')   
+            xml_seq.removeAttribute('frame_still_end')
+            xml_seq.removeAttribute('frame_still_start')
+            #~ xml_seq.removeAttribute('modifiers')
+            xml_seq.removeAttribute('type')
+            #~ xml_seq.removeAttribute('')
+            #~ xml_seq.removeAttribute('')
+            
