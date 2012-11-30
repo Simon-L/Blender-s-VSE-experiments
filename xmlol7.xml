@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<!-- BXML - Blender XML interchange format
+Blender version 2.64 (sub 0)
+-->
+<BlendData filepath="/home/simon/Images/auteuil_04-09/vidz/simplevse.blend" is_dirty="FALSE" is_saved="TRUE">
+  <actions>
+    <Action frame_range="9 209" id_root="SCENE" is_library_indirect="FALSE" is_updated="FALSE" is_updated_data="FALSE" library="NONE" name="SceneAction" tag="FALSE" use_fake_user="FALSE" users="1">
+      <fcurves>
+        <FCurve array_index="0" color="1 0.4 0.4" color_mode="AUTO_RAINBOW" data_path="sequence_editor.sequences_all[&quot;6397.001&quot;].blend_alpha" driver="NONE" extrapolation="CONSTANT" group="NONE" hide="FALSE" is_valid="TRUE" lock="FALSE" mute="FALSE" select="TRUE">
+          <keyframe_points>
+            <Keyframe co="9 0" handle_left="-8.56418 0" handle_left_type="AUTO_CLAMPED" handle_right="26.5642 0" handle_right_type="AUTO_CLAMPED" interpolation="BEZIER" select_control_point="TRUE" select_left_handle="TRUE" select_right_handle="TRUE" type="KEYFRAME">
+            </Keyframe>
+            <Keyframe co="54 1" handle_left="36.4326 1" handle_left_type="AUTO_CLAMPED" handle_right="87.9637 1" handle_right_type="AUTO_CLAMPED" interpolation="BEZIER" select_control_point="TRUE" select_left_handle="TRUE" select_right_handle="TRUE" type="KEYFRAME">
+            </Keyframe>
+            <Keyframe co="141 1" handle_left="107.036 1" handle_left_type="AUTO_CLAMPED" handle_right="160.52 1" handle_right_type="AUTO_CLAMPED" interpolation="BEZIER" select_control_point="TRUE" select_left_handle="TRUE" select_right_handle="TRUE" type="KEYFRAME">
+            </Keyframe>
+            <Keyframe co="191 0" handle_left="171.483 0" handle_left_type="AUTO_CLAMPED" handle_right="210.517 0" handle_right_type="AUTO_CLAMPED" interpolation="BEZIER" select_control_point="TRUE" select_left_handle="TRUE" select_right_handle="TRUE" type="KEYFRAME">
+            </Keyframe>
+          </keyframe_points>
+          <modifiers>
+          </modifiers>
+          <sampled_points>
+          </sampled_points>
+        </FCurve>
+        <FCurve array_index="0" color="1 0.4 0.4" color_mode="AUTO_RAINBOW" data_path="sequence_editor.sequences_all[&quot;6395.001&quot;].blend_alpha" driver="NONE" extrapolation="CONSTANT" group="NONE" hide="FALSE" is_valid="TRUE" lock="FALSE" mute="FALSE" select="TRUE">
+          <keyframe_points>
+            <Keyframe co="134 0" handle_left="104.722 0" handle_left_type="AUTO_CLAMPED" handle_right="163.278 0" handle_right_type="AUTO_CLAMPED" interpolation="BEZIER" select_control_point="TRUE" select_left_handle="TRUE" select_right_handle="TRUE" type="KEYFRAME">
+            </Keyframe>
+            <Keyframe co="209 1" handle_left="179.722 1" handle_left_type="AUTO_CLAMPED" handle_right="238.278 1" handle_right_type="AUTO_CLAMPED" interpolation="BEZIER" select_control_point="TRUE" select_left_handle="TRUE" select_right_handle="TRUE" type="KEYFRAME">
+            </Keyframe>
+          </keyframe_points>
+          <modifiers>
+          </modifiers>
+          <sampled_points>
+          </sampled_points>
+        </FCurve>
+      </fcurves>
+      <groups>
+      </groups>
+      <pose_markers>
+      </pose_markers>
+    </Action>
+  </actions>
+  <curves>
+  </curves>
+  <groups>
+  </groups>
+  <images>
+    <Image bindcode="0" depth="0" display_aspect="1 1" field_order="EVEN" file_format="TARGA" filepath="" filepath_raw="" fps="1" frame_duration="1" frame_end="0" frame_start="0" generated_height="1024" generated_type="UV_GRID" generated_width="1024" has_data="FALSE" is_dirty="FALSE" is_library_indirect="FALSE" is_updated="FALSE" is_updated_data="FALSE" library="NONE" mapping="UV" name="Render Result" packed_file="NONE" render_slot="0" resolution="0 0" size="0 0" source="VIEWER" tag="FALSE" tiles_x="1" tiles_y="1" type="RENDER_RESULT" use_animation="FALSE" use_clamp_x="FALSE" use_clamp_y="FALSE" use_color_unpremultiply="FALSE" use_fake_user="FALSE" use_fields="FALSE" use_generated_float="FALSE" use_premultiply="FALSE" use_tiles="FALSE" users="2" view_as_render="TRUE">
+      <colorspace_settings>
+        <ColorManagedColorspaceSettings name="Linear">
+        </ColorManagedColorspaceSettings>
+      </colorspace_settings>
+    </Image>
+  </images>
+  <libraries>
+  </libraries>
+  <masks>
+  </masks>
+  <movieclips>
+  </movieclips>
+  <node_groups>
+  </node_groups>
+  <scenes>
+    <Scene active_clip="NONE" active_layer="0" audio_distance_model="INVERSE_CLAMPED" audio_doppler_factor="1" audio_doppler_speed="343.3" audio_volume="1" background_set="NONE" camera="Object::Camera" cursor_location="-6.58381 -5.45549 2.20117" frame_current="83" frame_end="250" frame_preview_end="0" frame_preview_start="0" frame_start="1" frame_step="1" frame_subframe="0" gravity="0 0 -9.81" grease_pencil="NONE" is_library_indirect="FALSE" is_nla_tweakmode="FALSE" is_updated="FALSE" is_updated_data="FALSE" layers="TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE" library="NONE" name="Scene" node_tree="NONE" sync_mode="NONE" tag="TRUE" use_audio="FALSE" use_audio_scrub="FALSE" use_audio_sync="FALSE" use_fake_user="FALSE" use_frame_drop="FALSE" use_gravity="TRUE" use_nodes="FALSE" use_preview_range="FALSE" use_stamp_note="" users="1" world="World::World">
+      <animation_data>
+        <AnimData action="Action::SceneAction" action_blend_type="REPLACE" action_extrapolation="HOLD" action_influence="1" use_nla="TRUE">
+          <drivers>
+          </drivers>
+          <nla_tracks>
+          </nla_tracks>
+        </AnimData>
+      </animation_data>
+      <sequence_editor>
+        <SequenceEditor overlay_frame="0" overlay_lock="FALSE" show_overlay="FALSE">
+          <active_strip>
+            <MovieSequence animation_offset_end="0" animation_offset_start="0" blend_alpha="0" blend_type="ALPHA_OVER" channel="4" color_multiply="1" color_saturation="1" crop="NONE" effect_fader="0" filepath="//6395.mp4" frame_duration="266" frame_final_duration="266" frame_final_end="400" frame_final_start="134" frame_offset_end="0" frame_offset_start="0" frame_start="134" frame_still_end="0" frame_still_start="0" lock="FALSE" mpeg_preseek="25" mute="FALSE" name="6395.001" proxy="NONE" select="TRUE" select_left_handle="FALSE" select_right_handle="FALSE" speed_factor="0" stream_index="0" strobe="1" transform="NONE" type="MOVIE" use_crop="FALSE" use_default_fade="FALSE" use_deinterlace="FALSE" use_flip_x="FALSE" use_flip_y="FALSE" use_float="FALSE" use_linear_modifiers="FALSE" use_premultiply="FALSE" use_proxy="FALSE" use_proxy_custom_directory="FALSE" use_proxy_custom_file="FALSE" use_reverse_frames="FALSE" use_translation="FALSE">
+              <modifiers>
+              </modifiers>
+              <elements>
+                <SequenceElement filename="6395.mp4" orig_height="288" orig_width="352">
+                </SequenceElement>
+              </elements>
+            </MovieSequence>
+          </active_strip>
+          <meta_stack>
+          </meta_stack>
+          <sequences>
+            <MovieSequence animation_offset_end="0" animation_offset_start="0" blend_alpha="1" blend_type="REPLACE" channel="1" color_multiply="1" color_saturation="1" crop="NONE" effect_fader="0" filepath="/home/simon/Images/auteuil_04-09/vidz/6397.mp4" frame_duration="182" frame_final_duration="182" frame_final_end="191" frame_final_start="9" frame_offset_end="0" frame_offset_start="0" frame_start="9" frame_still_end="0" frame_still_start="0" lock="FALSE" mpeg_preseek="25" mute="FALSE" name="6397.001" proxy="NONE" select="FALSE" select_left_handle="FALSE" select_right_handle="FALSE" speed_factor="0" stream_index="0" strobe="1" transform="NONE" type="MOVIE" use_crop="FALSE" use_default_fade="FALSE" use_deinterlace="FALSE" use_flip_x="FALSE" use_flip_y="FALSE" use_float="FALSE" use_linear_modifiers="FALSE" use_premultiply="FALSE" use_proxy="FALSE" use_proxy_custom_directory="FALSE" use_proxy_custom_file="FALSE" use_reverse_frames="FALSE" use_translation="FALSE">
+              <modifiers>
+              </modifiers>
+              <elements>
+                <SequenceElement filename="6397.mp4" orig_height="288" orig_width="352">
+                </SequenceElement>
+              </elements>
+            </MovieSequence>
+            <SoundSequence animation_offset_end="0" animation_offset_start="0" blend_alpha="1" blend_type="REPLACE" channel="2" effect_fader="0" filepath="/home/simon/Images/auteuil_04-09/vidz/6397.mp4" frame_duration="175" frame_final_duration="175" frame_final_end="184" frame_final_start="9" frame_offset_end="0" frame_offset_start="0" frame_start="9" frame_still_end="0" frame_still_start="0" lock="FALSE" mute="FALSE" name="6397.mp4" pan="0" pitch="1" select="FALSE" select_left_handle="FALSE" select_right_handle="FALSE" show_waveform="FALSE" sound="Sound::6397.mp4" speed_factor="0" type="SOUND" use_default_fade="FALSE" use_linear_modifiers="FALSE" volume="1">
+              <modifiers>
+              </modifiers>
+            </SoundSequence>
+            <SoundSequence animation_offset_end="0" animation_offset_start="0" blend_alpha="1" blend_type="REPLACE" channel="3" effect_fader="0" filepath="//6395.mp4" frame_duration="256" frame_final_duration="256" frame_final_end="390" frame_final_start="134" frame_offset_end="0" frame_offset_start="0" frame_start="134" frame_still_end="0" frame_still_start="0" lock="FALSE" mute="FALSE" name="6395.mp4" pan="0" pitch="1" select="TRUE" select_left_handle="FALSE" select_right_handle="FALSE" show_waveform="FALSE" sound="Sound::6395.mp4" speed_factor="0" type="SOUND" use_default_fade="FALSE" use_linear_modifiers="FALSE" volume="1">
+              <modifiers>
+              </modifiers>
+            </SoundSequence>
+            <MovieSequence animation_offset_end="0" animation_offset_start="0" blend_alpha="0" blend_type="ALPHA_OVER" channel="4" color_multiply="1" color_saturation="1" crop="NONE" effect_fader="0" filepath="//6395.mp4" frame_duration="266" frame_final_duration="266" frame_final_end="400" frame_final_start="134" frame_offset_end="0" frame_offset_start="0" frame_start="134" frame_still_end="0" frame_still_start="0" lock="FALSE" mpeg_preseek="25" mute="FALSE" name="6395.001" proxy="NONE" select="TRUE" select_left_handle="FALSE" select_right_handle="FALSE" speed_factor="0" stream_index="0" strobe="1" transform="NONE" type="MOVIE" use_crop="FALSE" use_default_fade="FALSE" use_deinterlace="FALSE" use_flip_x="FALSE" use_flip_y="FALSE" use_float="FALSE" use_linear_modifiers="FALSE" use_premultiply="FALSE" use_proxy="FALSE" use_proxy_custom_directory="FALSE" use_proxy_custom_file="FALSE" use_reverse_frames="FALSE" use_translation="FALSE">
+              <modifiers>
+              </modifiers>
+              <elements>
+                <SequenceElement filename="6395.mp4" orig_height="288" orig_width="352">
+                </SequenceElement>
+              </elements>
+            </MovieSequence>
+          </sequences>
+          <sequences_all>
+            <MovieSequence animation_offset_end="0" animation_offset_start="0" blend_alpha="1" blend_type="REPLACE" channel="1" color_multiply="1" color_saturation="1" crop="NONE" effect_fader="0" filepath="/home/simon/Images/auteuil_04-09/vidz/6397.mp4" frame_duration="182" frame_final_duration="182" frame_final_end="191" frame_final_start="9" frame_offset_end="0" frame_offset_start="0" frame_start="9" frame_still_end="0" frame_still_start="0" lock="FALSE" mpeg_preseek="25" mute="FALSE" name="6397.001" proxy="NONE" select="FALSE" select_left_handle="FALSE" select_right_handle="FALSE" speed_factor="0" stream_index="0" strobe="1" transform="NONE" type="MOVIE" use_crop="FALSE" use_default_fade="FALSE" use_deinterlace="FALSE" use_flip_x="FALSE" use_flip_y="FALSE" use_float="FALSE" use_linear_modifiers="FALSE" use_premultiply="FALSE" use_proxy="FALSE" use_proxy_custom_directory="FALSE" use_proxy_custom_file="FALSE" use_reverse_frames="FALSE" use_translation="FALSE">
+              <modifiers>
+              </modifiers>
+              <elements>
+                <SequenceElement filename="6397.mp4" orig_height="288" orig_width="352">
+                </SequenceElement>
+              </elements>
+            </MovieSequence>
+            <SoundSequence animation_offset_end="0" animation_offset_start="0" blend_alpha="1" blend_type="REPLACE" channel="2" effect_fader="0" filepath="/home/simon/Images/auteuil_04-09/vidz/6397.mp4" frame_duration="175" frame_final_duration="175" frame_final_end="184" frame_final_start="9" frame_offset_end="0" frame_offset_start="0" frame_start="9" frame_still_end="0" frame_still_start="0" lock="FALSE" mute="FALSE" name="6397.mp4" pan="0" pitch="1" select="FALSE" select_left_handle="FALSE" select_right_handle="FALSE" show_waveform="FALSE" sound="Sound::6397.mp4" speed_factor="0" type="SOUND" use_default_fade="FALSE" use_linear_modifiers="FALSE" volume="1">
+              <modifiers>
+              </modifiers>
+            </SoundSequence>
+            <SoundSequence animation_offset_end="0" animation_offset_start="0" blend_alpha="1" blend_type="REPLACE" channel="3" effect_fader="0" filepath="//6395.mp4" frame_duration="256" frame_final_duration="256" frame_final_end="390" frame_final_start="134" frame_offset_end="0" frame_offset_start="0" frame_start="134" frame_still_end="0" frame_still_start="0" lock="FALSE" mute="FALSE" name="6395.mp4" pan="0" pitch="1" select="TRUE" select_left_handle="FALSE" select_right_handle="FALSE" show_waveform="FALSE" sound="Sound::6395.mp4" speed_factor="0" type="SOUND" use_default_fade="FALSE" use_linear_modifiers="FALSE" volume="1">
+              <modifiers>
+              </modifiers>
+            </SoundSequence>
+            <MovieSequence animation_offset_end="0" animation_offset_start="0" blend_alpha="0" blend_type="ALPHA_OVER" channel="4" color_multiply="1" color_saturation="1" crop="NONE" effect_fader="0" filepath="//6395.mp4" frame_duration="266" frame_final_duration="266" frame_final_end="400" frame_final_start="134" frame_offset_end="0" frame_offset_start="0" frame_start="134" frame_still_end="0" frame_still_start="0" lock="FALSE" mpeg_preseek="25" mute="FALSE" name="6395.001" proxy="NONE" select="TRUE" select_left_handle="FALSE" select_right_handle="FALSE" speed_factor="0" stream_index="0" strobe="1" transform="NONE" type="MOVIE" use_crop="FALSE" use_default_fade="FALSE" use_deinterlace="FALSE" use_flip_x="FALSE" use_flip_y="FALSE" use_float="FALSE" use_linear_modifiers="FALSE" use_premultiply="FALSE" use_proxy="FALSE" use_proxy_custom_directory="FALSE" use_proxy_custom_file="FALSE" use_reverse_frames="FALSE" use_translation="FALSE">
+              <modifiers>
+              </modifiers>
+              <elements>
+                <SequenceElement filename="6395.mp4" orig_height="288" orig_width="352">
+                </SequenceElement>
+              </elements>
+            </MovieSequence>
+          </sequences_all>
+        </SequenceEditor>
+      </sequence_editor>
+      <sequencer_colorspace_settings>
+        <ColorManagedColorspaceSettings name="sRGB">
+        </ColorManagedColorspaceSettings>
+      </sequencer_colorspace_settings>
+      <keying_sets>
+      </keying_sets>
+      <keying_sets_all>
+      </keying_sets_all>
+      <timeline_markers>
+      </timeline_markers>
+      </Scene>
+  </scenes>
+  </BlendData>
