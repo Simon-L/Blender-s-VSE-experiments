@@ -39,3 +39,9 @@ viewer.location = ( 600 , 0 ) # Set location on Comp canevas
 image_out_socket = image.outputs['Image'] # Convenience
 viewer_in_socket = viewer.inputs['Image'] # idem
 bpy.context.scene.node_tree.links.new(image_out_socket, viewer_in_socket) # Linking
+
+# Add keyframes
+for fcurve in fcurves :
+    
+    bpy.data.actions.fcurves.new('bpy.context.scene.' + fcurve.attrib['data_path'])
+    
