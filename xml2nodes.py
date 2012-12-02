@@ -15,11 +15,11 @@ for movieStrip in movieSequences :
         break
         
 # Retrieve possible FCurves associated to the strip
-#~ fcurves = []
-#~ for fcurve in root.findall(".//FCurve") :
-    #~ 
-    #~ if fcurve.attrib['data_path'].startswith('sequence_editor.sequences_all["' + xmlMovieSequence.attrib['name']):
-        #~ fcurves.append(fcurve)
+fcurves = []
+for fcurve in root.findall(".//FCurve") :
+    
+    if fcurve.attrib['data_path'].startswith('sequence_editor.sequences_all["' + xmlMovieSequence.attrib['name'] + '"]'):
+        fcurves.append(fcurve)
 
 # Create an Image datablock to use for the Image node (Convenience variable)
 image_block = bpy.data.images.load(xmlMovieSequence.attrib['filepath'])
