@@ -9,7 +9,7 @@ stripName = "6397.001"
 # Retrieve corresponding XML element
 movieSequences = root.findall('./scenes/Scene/sequence_editor/SequenceEditor/sequences_all/MovieSequence')
 for movieStrip in movieSequences :  
-    if movieStrip.attrib['name'] == stripName :
+    if movieStrip.get['name'] == stripName :
 # xmlMovieSequence is the result
         xmlMovieSequence = movieStrip
         break
@@ -22,15 +22,26 @@ for fcurve in root.findall(".//FCurve") :
         fcurves.append(fcurve)
 
 # Create an Image datablock to use for the Image node (Convenience variable)
-image_block = bpy.data.images.load(xmlMovieSequence.attrib['filepath'])
+image_block = bpy.data.images.load(xmlMovieSequence.get['filepath'])
 
 # Create Image node
 image = bpy.context.scene.node_tree.nodes.new('IMAGE')
 image.image = image_block # Sets the image datablock as Image element
-image.frame_duration = int(xmlMovieSequence.attrib['frame_final_duration']) # Copy parameters from xml to node
-image.frame_offset = int(xmlMovieSequence.attrib['frame_offset_start']) # idem
+image.frame_duration = int(xmlMovieSequence.get['frame_final_duration']) # Copy parameters from xml to node
+image.frame_offset = int(xmlMovieSequence.get['frame_offset_start']) # idem
 #~ image.frame_start = int(xmlMovieSequence.attrib['frame_final_start']) # idem
 
+# Add keyframes
+for fcurve in fcurves :    
+    if fcurve.attrib['data_path'].endswith('.blend_alpha') :
+        bpy_fcurve = bpy.data.actions.fcurves.new('bpy.context.scene.' + fcurve.attrib['data_path'])
+        start_frame = int(xmlMovieSequence.attrib['frame_final_start'])
+        for keyframe in fcurve.findall('Keyframe') :
+            frame = int(keyframe.get('co').split()[0])
+            if frame >= start_frame :
+                bpy_fcurve.keyframe_points
+            
+            
 # Create Viewer node
 viewer = bpy.context.scene.node_tree.nodes.new('VIEWER')
 viewer.location = ( 600 , 0 ) # Set location on Comp canevas
@@ -39,9 +50,3 @@ viewer.location = ( 600 , 0 ) # Set location on Comp canevas
 image_out_socket = image.outputs['Image'] # Convenience
 viewer_in_socket = viewer.inputs['Image'] # idem
 bpy.context.scene.node_tree.links.new(image_out_socket, viewer_in_socket) # Linking
-
-# Add keyframes
-for fcurve in fcurves :
-    
-    bpy.data.actions.fcurves.new('bpy.context.scene.' + fcurve.attrib['data_path'])
-    
