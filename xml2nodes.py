@@ -34,30 +34,34 @@ image.frame_offset = int(xmlMovieSequence.get('frame_offset_start')) # idem
 #~ image.frame_start = int(xmlMovieSequence.attrib['frame_final_start']) # idem
 image_out_socket = image.outputs['Image'] # Convenience
 
+# Prepare 
+if len(fcurves) > 0 :
+    bpy.context.scene.node_tree.animation_data_create()
+    bpy.context.scene.node_tree.animation_data.action = bpy.data.actions.new(name="Nodetree_Action")
+
 # Add keyframes
 for fcurve in fcurves :
-    #~ print("inside the for fcurve")
+    
     if fcurve.attrib['data_path'].endswith('.blend_alpha') : # If opacity fcurve
-        #~ print("if fcurve.attrib")
+        
         mix = True
         mixNode = bpy.context.scene.node_tree.nodes.new('MIX_RGB') # Add Mix node
         mixNode.location = ( 300 , 0 ) # Set location on Comp canevas
         mixNode_output = mixNode.outputs['Image']
         mixNode_inputs = mixNode.inputs
         mixNode_inputs[1].default_value = (0,0,0,1) # Sets input to Black
-        bpy.data.actions.new('SceneAction')
-        bpy_fcurve = bpy.data.actions['SceneAction'].fcurves.new('mixNode.inputs[0].default_value')
+        bpy_fcurve = bpy.context.scene.node_tree.animation_data.action.fcurves.new('nodes["Mix"].inputs["Fac"].default_value')
         start_frame = int(xmlMovieSequence.attrib['frame_final_start'])
         print(start_frame)
         for keyframe in fcurve.findall('./keyframe_points/Keyframe') : 
-            #~ print(keyframe)
+            
             print('avant bla !')
             frame = int(keyframe.get('co').split()[0])
             print('bla')
             if frame >= start_frame : # Offsets accordingly to relocate around 0
-                bpy_keyframe = bpy_fcurve.keyframe_points.insert(frame - start_frame,int(keyframe.get('co').split()[1]))
+                bpy_keyframe = bpy_fcurve.keyframe_points.insert(frame - start_frame + 1,int(keyframe.get('co').split()[1]))
             else :
-                bpy_keyframe = bpy_fcurve.keyframe_points.insert(start_frame - frame,int(keyframe.get('co').split()[1]))                
+                bpy_keyframe = bpy_fcurve.keyframe_points.insert(start_frame - frame + 1,int(keyframe.get('co').split()[1]))                
             bpy_keyframe.handle_left = (float(keyframe.get('handle_left').split()[0]),float(keyframe.get('handle_left').split()[1])) # Sets parameters according to XML
             bpy_keyframe.handle_right = (float(keyframe.get('handle_right').split()[0]),float(keyframe.get('handle_right').split()[1]))
             bpy_keyframe.handle_left_type = keyframe.get('handle_left_type')
