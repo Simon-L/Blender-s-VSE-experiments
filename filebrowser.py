@@ -1,4 +1,5 @@
 import bpy
+import re
 
 class XmlPanel(bpy.types.Panel):
     """Creates a Panel in the scene context of the properties editor"""
@@ -13,6 +14,16 @@ class XmlPanel(bpy.types.Panel):
         if filename.endswith('.xml') :
             
             self.layout.label(text=filename, icon='FILE' )
+            try :
+                filehandle = open(bpy.context.screen.areas[5].spaces[0].params.directory + filename)
+                filehandle.readline()
+                filehandle.readline()
+                a = filehandle.readline()
+                #~ print("ligne : ",a)
+                self.layout.label(text="Containing : " + re.findall(r'[^"]+/(.+\.blend)"',a)[0])
+                #~ print("result : ", re.findall(r'[^"]+/(.+\.blend)"',a))
+            except :
+                print("lol")
             
             row = self.layout.row(align=True)
             row.alignment = 'EXPAND'
@@ -26,10 +37,7 @@ class XmlPanel(bpy.types.Panel):
             
         else :
             self.layout.label(text="Please select a BXML file", icon='ERROR' )
-                    
-            #~ tree = ET.parse(bpy.context.screen.areas[5].spaces[0].params.directory + filename)
-            #~ root = tree.getroot()
-            #~ self.layout.label(text=("Blend file : " + root.get('filepath') ))
+
             
 class OBJECT_OT_XmlModeButton(bpy.types.Operator):
     bl_idname = "xml.mode"
