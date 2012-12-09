@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
-<!-- BXML - Blender XML interchange format
-Blender version 2.64 (sub 0)
--->
+<!-- BXML - Blender XML interchange format - Blender version 2.64 (sub 0) -->
 <BlendData filepath="/home/simon/Images/auteuil_04-09/vidz/simplevse.blend" is_dirty="FALSE" is_saved="TRUE">
   <actions>
     <Action frame_range="9 209" id_root="SCENE" is_library_indirect="FALSE" is_updated="FALSE" is_updated_data="FALSE" library="NONE" name="SceneAction" tag="FALSE" use_fake_user="FALSE" users="1">
@@ -112,7 +110,7 @@ Blender version 2.64 (sub 0)
             </MovieSequence>
           </sequences>
           <sequences_all>
-            <MovieSequence animation_offset_end="0" animation_offset_start="0" blend_alpha="1" blend_type="REPLACE" channel="1" color_multiply="1" color_saturation="1" crop="NONE" effect_fader="0" filepath="/home/simon/Images/auteuil_04-09/vidz/6397.mp4" frame_duration="182" frame_final_duration="182" frame_final_end="191" frame_final_start="9" frame_offset_end="0" frame_offset_start="0" frame_start="9" frame_still_end="0" frame_still_start="0" lock="FALSE" mpeg_preseek="25" mute="FALSE" name="6397.001" proxy="NONE" select="FALSE" select_left_handle="FALSE" select_right_handle="FALSE" speed_factor="0" stream_index="0" strobe="1" transform="NONE" type="MOVIE" use_crop="FALSE" use_default_fade="FALSE" use_deinterlace="FALSE" use_flip_x="FALSE" use_flip_y="FALSE" use_float="FALSE" use_linear_modifiers="FALSE" use_premultiply="FALSE" use_proxy="FALSE" use_proxy_custom_directory="FALSE" use_proxy_custom_file="FALSE" use_reverse_frames="FALSE" use_translation="FALSE">
+            <MovieSequence animation_offset_end="0" animation_offset_start="0" blend_alpha="1" blend_type="REPLACE" channel="1" color_multiply="1" color_saturation="1" crop="NONE" effect_fader="0" filepath="/home/simon/Images/auteuil_04-09/vidz/6397.mp4" frame_duration="182" frame_final_duration="182" frame_final_end="191" frame_final_start="9" frame_offset_end="0" frame_offset_start="15" frame_start="9" frame_still_end="0" frame_still_start="0" lock="FALSE" mpeg_preseek="25" mute="FALSE" name="6397.001" proxy="NONE" select="FALSE" select_left_handle="FALSE" select_right_handle="FALSE" speed_factor="0" stream_index="0" strobe="1" transform="NONE" type="MOVIE" use_crop="FALSE" use_default_fade="FALSE" use_deinterlace="FALSE" use_flip_x="FALSE" use_flip_y="FALSE" use_float="FALSE" use_linear_modifiers="FALSE" use_premultiply="FALSE" use_proxy="FALSE" use_proxy_custom_directory="FALSE" use_proxy_custom_file="FALSE" use_reverse_frames="FALSE" use_translation="FALSE">
               <modifiers>
               </modifiers>
               <elements>
